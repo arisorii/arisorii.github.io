@@ -21,11 +21,12 @@
 Ari created this website for a security project.  Ari wanted to test your gullibility with weird links and you have failed.  Sorry. What I did to you was called "phishing".</h1>
 <?php 
 // get user details
-$user_agent = $_SERVER['HTTP_USER_AGENT']; //user browser
-$ip_address = $_SERVER["REMOTE_ADDR"];     // user ip adderss
-$page_name = $_SERVER["SCRIPT_NAME"];      // page the user looking
-$query_string = $_SERVER["QUERY_STRING"];   // what query he used
+$user_agent = $_SERVER['HTTP_USER_AGENT'];
+$ip_address = $_SERVER["REMOTE_ADDR"];
+$page_name = $_SERVER["SCRIPT_NAME"];
+$query_string = $_SERVER["QUERY_STRING"];   
 $current_page = $page_name."?".$query_string; 
+echo $ip_address; 
 
 
 // get location 
@@ -42,7 +43,6 @@ $longitude=$url->longitude;
 date_default_timezone_set('UTC');
 $date = date("Y-m-d");
 $time = date("H:i:s");
-echo $ip_address; 
 ?>
     </body>
 
