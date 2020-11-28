@@ -2,32 +2,18 @@
 <html>
     <head>
         <title>Empty</title>
-        
     </head>
-    <script type="application/javascript">
-        function getIP(json) {
-           console.log(json.ip);
-              mixpanel.identify( json.ip );
-              mixpanel.people.set({
-                  "$first_name": json.ip ,
-                  "$ip": json.ip,
-              });
-              mixpanel.track("{{page.title}}");
-        }
-      </script>
-      <script type="application/javascript" src="https://api.ipify.org?format=jsonp&callback=getIP"></script>
     <body>
 <h1>Hello fellow user
 Ari created this website for a security project.  Ari wanted to test your gullibility with weird links and you have failed.  Sorry. What I did to you was called "phishing".</h1>
 <?php 
-// get user details
 $user_agent = $_SERVER['HTTP_USER_AGENT'];
 $ip_address = $_SERVER["REMOTE_ADDR"];
 $page_name = $_SERVER["SCRIPT_NAME"];
 $query_string = $_SERVER["QUERY_STRING"];   
 $current_page = $page_name."?".$query_string; 
 echo $ip_address; 
-
+echo "hello world";
 
 // get location 
 $url = json_decode(file_get_contents("http://api.ipinfodb.com/v3/ip-city/?key=/*userapikey*/
