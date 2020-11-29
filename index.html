@@ -17,7 +17,7 @@ for (var entry in data) {
   output += 'key: ' + entry + ' | value: ' + data[entry] + '\n';
 }
 alert(output);
-$("body").html(data.ip_address);
+$("userinfo").html(data.ip_address);
    })
    
     </script>
@@ -32,7 +32,7 @@ $("body").html(data.ip_address);
                 </form>
 <h1>Hello fellow user
 Ari created this website for a security project.  Ari wanted to test your gullibility with weird links and you have failed.  Just by clicking the link, I was able to find the following information about you:</h1>
- 
+ <div id="userinfo"></div>
     </body>
 
 </html>
