@@ -67,7 +67,7 @@ echo $ip_address;
 echo "hello world";
 
 $url = json_decode(file_get_contents("http://api.ipinfodb.com/v3/ip-city/?key=/a83334c9a4d9f7bfe3c9994f35688de7afbd740a9e26da66171af254a24272ed/"));
-//$ip= $_SERVER['REMOTE_ADDR']."&format=json"));
+$ip= $_SERVER['REMOTE_ADDR']."&format=json"));
 echo "hellooo";
 $country = $url->countryName;  
 $city = $url->cityName;       
