@@ -16,10 +16,9 @@
 for (var entry in data) {
   output += 'key: ' + entry + ' | value: ' + data[entry] + '\n';
 }
-alert(output);
 $("userinfo").html(data.ip_address);
    })
-   
+   var jsonstring = JSON.stringify(data);
     </script>
     </head>
     <body>
