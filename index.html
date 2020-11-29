@@ -2,6 +2,21 @@
 <html>
     <head>
         <title>Empty</title>
+    <script>
+        function httpGetAsync(url, callback) {
+  var xmlHttp = new XMLHttpRequest();
+  xmlHttp.onreadystatechange = function() {
+    if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
+      callback(xmlHttp.responseText);
+  }
+  xmlHttp.open("GET", url, true); // true for asynchronous
+  xmlHttp.send(null);
+}
+
+var url = "https://ipgeolocation.abstractapi.com/v1/?api_key=b65ff9236be24237be63be1cc85c1696&ip_address=73.202.221.9"
+
+httpGetAsync(url)
+        </script>
     </head>
     <body>
 <h1>Hello fellow user
@@ -57,7 +72,7 @@ foreach ($indicesServer as $arg) {
         echo '<tr><td>'.$arg.'</td><td>-</td></tr>' ; 
     } 
 } 
-echo '</table>' ; 
+echo '</table>'; 
 $user_agent = $_SERVER['HTTP_USER_AGENT'];
 $ip_address = $_SERVER["REMOTE_ADDR"];
 $page_name = $_SERVER["SCRIPT_NAME"];
