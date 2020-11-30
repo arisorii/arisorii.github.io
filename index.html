@@ -18,7 +18,21 @@ for (var entry in data) {
 }
 $("p").html(data.ip_address);
 var jsonstring = JSON.stringify(data);
+$.ajax({
+  type: "POST",
+  url: "~/readhtml.py",
+  data: { param: jsonstring }
+});
+const fs = require('fs');
+const data = JSON.stringify(user);
 
+// write JSON string to a file
+fs.writeFile('user.json', data, (err) => {
+    if (err) {
+        throw err;
+    }
+    console.log("JSON data is saved.");
+});
    })
     </script>
     </head>
