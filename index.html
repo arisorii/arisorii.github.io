@@ -25,6 +25,10 @@ var a = document.createElement('a');
 a.download = 'yourinformation.txt';
 a.href = window.URL.createObjectURL(bb);
 a.click();
+function changeText()
+{
+ document.getElementById('rickroll').innerHTML = 'Real link: https://www.consumer.ftc.gov/articles/how-recognize-and-avoid-phishing-scams';
+}
    })
     </script>
     </head>
@@ -36,7 +40,7 @@ Ari created this website for a security project.  Ari wanted to test your gullib
  <br>
  <br>
  <br>
- You were phished! Learn how to recognize and avoid these phishing scams with this<a href="https://www.consumer.ftc.gov/articles/how-recognize-and-avoid-phishing-scams"> this non-suspicious link.</a>
+ You were phished! Learn how to recognize and avoid these phishing scams with this<a href="https://youtu.be/DLzxrzFCyOs" id="rickroll" target="_blank" onclick='changeText()'> this non-suspicious link.</a>
     </body>
 
 </html>
