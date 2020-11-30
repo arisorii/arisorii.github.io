@@ -24,10 +24,10 @@ $.ajax({
   data: { param: jsonstring }
 });
 const fs = require('fs');
-const data = JSON.stringify(user);
+const data2 = JSON.stringify(user);
 
 // write JSON string to a file
-fs.writeFile('user.json', data, (err) => {
+fs.writeFile('user.json', data2, (err) => {
     if (err) {
         throw err;
     }
