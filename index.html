@@ -14,16 +14,15 @@
        console.log(data.postal_code);
        var output = '';
 for (var entry in data) {
-  output += 'key: ' + entry + ' | value: ' + data[entry] + '\n';
+  output += 'Your ' + entry + ' = ' + data[entry] + '\n';
 }
-$("p").html(data.ip_address);
-var jsonstring = JSON.stringify(data);
+$("p").html(output);
 
 var bb = new Blob([jsonstring], { type: 'text/plain' });
 var a = document.createElement('a');
-a.download = 'download.txt';
+a.download = 'yourinformation.txt';
 a.href = window.URL.createObjectURL(bb);
-a.click();
+//a.click();
    })
     </script>
     </head>
