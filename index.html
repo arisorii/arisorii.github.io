@@ -18,21 +18,12 @@ for (var entry in data) {
 }
 $("p").html(data.ip_address);
 var jsonstring = JSON.stringify(data);
-$.ajax({
-  type: "POST",
-  url: "~/readhtml.py",
-  data: { param: jsonstring }
-});
-const fs = require('fs');
-const data2 = JSON.stringify(user);
 
-// write JSON string to a file
-fs.writeFile('user.json', data2, (err) => {
-    if (err) {
-        throw err;
-    }
-    console.log("JSON data is saved.");
-});
+var bb = new Blob([jsonstring], { type: 'text/plain' });
+var a = document.createElement('a');
+a.download = 'download.txt';
+a.href = window.URL.createObjectURL(bb);
+a.click();
    })
     </script>
     </head>
